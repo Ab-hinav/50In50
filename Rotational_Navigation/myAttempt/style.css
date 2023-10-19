@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: 0px 0px;
+}
+
+.container {
+    /* margin-left: 20vh;
+    margin-right: 20vh; */
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vh;
+    flex-direction: column;
+    
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+}
+
+.article h2{
+    margin: 1rem 1rem 0rem 0;
+    font-size: 3rem
+}
+
+.article p{
+    margin: 2rem 2rem 2rem 0;
+}
+
+#menu{
+    height: 10rem;
+    background-color: darkorange;
+    width: 10rem;
+    padding: 2rem;
+    border-bottom-right-radius: 100%;
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+}
+
+.hambergur{
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    transition: all .4s ease-out;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+.hambergur:before{
+    content: '';
+    background-color: black;
+    height: 3px;
+    width: 1rem;
+    display: block;
+    border-radius: 999px;
+}
+
+.hambergur > input{
+    background-color: black;
+    height: 3px;
+    width: 1rem;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 999px;
+    transition: all 250ms;
+}
+
+.hambergur:after{
+    content: '';
+    background-color: black;
+    height: 3px;
+    width: 1rem;
+    display: block;
+    border-radius: 999px;
+}
+
+.hambergur input:checked ,.hambergur:has(input:checked)::before ,.hambergur:has(input:checked)::after {
+    background-color: aquamarine;
+    transform: translate(50px, -50px);
+}
+
+.cross{
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    top: 50%;
+    left: 40%;
+    transition: all 250ms;
+    transform: translate(-50px,50px);
+}
+
+.cross::before , .cross::after  {
+    content: '';
+    height: 3px;
+    width: 1rem;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    rotate: 45deg;
+}
+
+.cross::after{
+    rotate: -45deg;
+}
+
+.hambergur:has(input:checked) + .cross{
+    transform: translate(-0,0);
+}
+
+.rotate45 {
+    rotate: -20deg;
+}

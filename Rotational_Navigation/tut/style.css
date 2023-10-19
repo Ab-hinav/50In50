@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #222;
+    background-color: #333;
+}
+
+.container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform .4s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 3rem;
+
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: .4s;
+}
+
+nav{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li{
+    transform: translateX(-100%);
+    transition: transform .4s linear;
+}
+
+nav ul li + li{
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li + li +li{
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+nav ul li i{
+ margin: 2px;
+}
+
+nav ul li a{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fafafa;
+    text-decoration: none;
+    padding: .2rem;
+    margin: 10px;
+}
+
+.container img{
+    width: 100%;
+}
+
+.circle-container{
+    position: absolute;
+    top:-100px;
+    left: -100px;
+    /* z-index: -1; */
+}
+
+.circle{
+    background: lightcoral;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform .4s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.circle button#open{
+    left: 65%;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1{
+    margin: 0;
+}
+
+.content small{
+    color:#555;
+    font-style: italic;
+}
+
+.content p{
+    color: #333;
+    line-height: 1.5;
+}
+
