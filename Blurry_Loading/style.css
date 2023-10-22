@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+.container {
+    background: url('./annie-spratt-84nb5e7zoMM-unsplash.jpg') no-repeat center center/cover ;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    filter: blur(0px);
+    z-index: -2;
+}
+
+/* .container::after{
+    content: '';
+    background: #5d5555;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+} */
+
+#loader {
+    border: 12px solid white;
+    border-radius: 50%;
+    border-top: 12px solid #444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#counter{
+    height: 160px;
+    width: 160px;
+    color: aliceblue;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 23;
+}
+
+
+/* .container::after {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+} */
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
