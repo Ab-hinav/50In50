@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+h1 {
+    margin: 2rem;
+}
+.box{
+    background-color: steelblue;
+    color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 10px;
+    transform: translateX(400%);
+    transition: all .4s ease-in;
+}
+
+.box:nth-of-type(2n){
+    transform: translateX(-400%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
