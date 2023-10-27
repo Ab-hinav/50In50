@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    font-size: 5rem;
+}
+
+a:hover{
+    background: #ac43c3;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#part-one > *{
+    position: relative;
+    z-index: 12;
+}
+
+#part-one{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url('./martin-katler-caNzzoxls8Q-unsplash.jpg') no-repeat center center/cover;
+    position: relative;
+    transition: all .6s ease-in-out;
+}
+
+#part-one::after{
+    content: '';
+    background-image: linear-gradient(120deg, #ac43c3, #83bacb);
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#part-one h2{
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    
+    padding: .6rem;
+    margin-top: 2rem;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: white;
+    font-size: large;
+}
+
+#part-two{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url('./sam-pak-X6QffKLwyoQ-unsplash.jpg') no-repeat center center/cover;
+    position: relative;
+    transition: all .6s ease-in;
+}
+
+#part-two h2{
+
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+}
+
+#part-two > *{
+    position: relative;
+    z-index: 2;
+}
+
+#part-two::after{
+    content: '';
+    background-image: linear-gradient(120deg, #cf44ee, #33d0ff);
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* hover */
+
+#part-one.hover-left{
+    width: 75%;
+}
+
+#part-two.hover-left{
+    width: 25%
+}
+
+#part-one.hover-right{
+    width: 25%;
+}
+
+#part-two.hover-right{
+    width: 75%;
+}
+
+
+
+/* #part-one:hover {
+    width: 300%; 
+} */
+
+/* #part-two:hover{
+    width: 300%;
+} */
